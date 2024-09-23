@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Claims Portal</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Insurance Customer Self-Service Portal</h1>
+            <nav>
+                <button onclick="showSection('submitClaim')">File a Claim</button>
+                <button onclick="showSection('trackClaims')">Track Claims</button>
+                <button onclick="showSection('chatbot')">Chatbot</button>
+                <button onclick="showSection('knowledgeBase')">Search Knowledge Base</button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="submitClaim" class="hidden">
+                <h2>Submit a New Insurance Claim</h2>
+                <form id="claimForm">
+                    <label>Policy Number: <input type="text" id="policyNumber" required></label>
+                    <label>Incident Date: <input type="date" id="incidentDate" required></label>
+                    <label>Incident Description: <textarea id="incidentDescription" required></textarea></label>
+                    <label>Attach Files: <input type="file" id="supportingDocuments"></label>
+                    <button type="submit">Submit Claim</button>
+                </form>
+                <div id="submitMessage" class="hidden"></div>
+            </section>
+
+            <section id="trackClaims" class="hidden">
+                <h2>Your Submitted Claims</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Claim Number</th>
+                            <th>Status</th>
+                            <th>Date Submitted</th>
+                        </tr>
+                    </thead>
+                    <tbody id="claimsTableBody"></tbody>
+                </table>
+            </section>
+
+            <section id="chatbot" class="hidden">
+                <h2>Chat with Us (AI-Powered Chatbot)</h2>
+                <div id="chatContainer">
+                    <div id="chatOutput"></div>
+                    <input type="text" id="chatInput" placeholder="How can we assist you today?">
+                    <button onclick="sendChat()">Send</button>
+                </div>
+            </section>
+
+            <section id="knowledgeBase" class="hidden">
+                <h2>Search Knowledge Base</h2>
+                <input type="text" id="searchInput" placeholder="Search FAQs...">
+                <div id="searchResults"></div>
+            </section>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

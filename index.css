@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav button {
+    margin: 0 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#chatContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#chatOutput {
+    border: 1px solid #ddd;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
